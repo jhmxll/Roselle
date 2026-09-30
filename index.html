@@ -1,353 +1,1094 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Roselle | Nuestra Empresa</title>
+<meta charset="UTF-8">
 
-    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<title>ROSELLE | Donde cada detalle florece</title>
 
-        body {
-            background: #fff5fa;
-            color: #333;
-        }
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
 
-        header {
-            background: linear-gradient(135deg, #8e4568, #c77da4);
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
 
-        header h1 {
-            font-size: 45px;
-            letter-spacing: 4px;
-        }
+<style>
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .intro {
-            text-align: center;
-            padding: 35px 20px 10px;
-        }
+body {
+    background: #fff7fb;
+    color: #555;
+    font-family: Arial, sans-serif;
+}
 
-        .intro h2 {
-            color: #8e4568;
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
 
-        .intro p {
-            color: #666;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.6;
-        }
+/* =========================
+   ENCABEZADO
+========================= */
 
-        .integrantes {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+header {
+    background: linear-gradient(135deg, #8e4568, #c979a5);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
 
-        .tarjeta {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-            transition: 0.3s;
-        }
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    letter-spacing: 7px;
+    margin-bottom: 12px;
+}
 
-        .tarjeta:hover {
-            transform: translateY(-7px);
-        }
+header p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
 
-        .foto {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: auto;
-            background: #f3d5e4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            font-weight: bold;
-            color: #8e4568;
-            margin-bottom: 15px;
-        }
 
-        .tarjeta h3 {
-            color: #8e4568;
-            font-size: 23px;
-        }
+/* =========================
+   DESCRIPCIÓN EMPRESA
+========================= */
 
-        .cargo {
-            color: #777;
-            margin: 8px 0 15px;
-        }
+.empresa {
+    max-width: 900px;
+    margin: 55px auto;
+    padding: 0 25px;
+    text-align: center;
+}
 
-        .codigo {
-            width: 100%;
-            max-width: 240px;
-            height: 80px;
-            margin: 10px auto;
-        }
+.empresa h2 {
+    color: #8e4568;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
 
-        .id {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
+.empresa p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
 
-        button {
-            background: #8e4568;
-            color: white;
-            border: none;
-            padding: 11px 22px;
-            border-radius: 25px;
-            cursor: pointer;
-        }
+.empresa .frase {
+    color: #9b5278;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 25px;
+}
 
-        button:hover {
-            background: #6f3150;
-        }
 
-        footer {
-            background: #8e4568;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
+/* =========================
+   EQUIPO
+========================= */
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 35px;
-            }
-        }
-    </style>
+.titulo-equipo {
+    text-align: center;
+    color: #8e4568;
+    font-family: Georgia, serif;
+    font-size: 33px;
+    margin-top: 45px;
+    margin-bottom: 8px;
+}
+
+.subtitulo-equipo {
+    text-align: center;
+    color: #888;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.integrantes {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(290px, 1fr));
+
+    gap: 30px;
+}
+
+
+.tarjeta {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px 23px;
+
+    text-align: center;
+
+    border: 1px solid #f0dce6;
+
+    box-shadow:
+    0 10px 30px rgba(120,50,90,0.10);
+
+    transition: 0.3s;
+
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+    0 18px 35px rgba(120,50,90,0.16);
+
+}
+
+
+/* =========================
+   CÍRCULO
+========================= */
+
+.foto {
+
+    width: 105px;
+    height: 105px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #f4d6e5;
+
+    color: #8e4568;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    border: 5px solid #fff;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================
+   NOMBRE
+========================= */
+
+.tarjeta h3 {
+
+    color: #7d3f60;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================
+   CARGO
+========================= */
+
+.cargo {
+
+    color: #a0587d;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    line-height: 1.5;
+
+    min-height: 42px;
+
+}
+
+
+/* =========================
+   DESCRIPCIÓN
+========================= */
+
+.descripcion {
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #666;
+
+    margin: 17px 4px;
+
+    text-align: center;
+
+    min-height: 150px;
+
+}
+
+
+/* =========================
+   CÓDIGO DE BARRAS
+========================= */
+
+.codigo {
+
+    width: 100%;
+
+    max-width: 250px;
+
+    height: 75px;
+
+    margin: 10px auto;
+
+}
+
+
+.id {
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+
+    background: #8e4568;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+}
+
+button:hover {
+
+    background: #6f3150;
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(50,20,40,0.65);
+
+    z-index: 100;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+.modal-contenido {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+.cerrar {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 12px;
+
+    font-size: 28px;
+
+    color: #888;
+
+    cursor: pointer;
+
+}
+
+
+.modal-contenido h2 {
+
+    color: #8e4568;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 18px;
+
+}
+
+
+.modal-contenido p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin: 10px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #8e4568;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+}
+
+footer p {
+
+    margin: 6px;
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:600px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .empresa h2 {
+        font-size: 28px;
+    }
+
+    .titulo-equipo {
+        font-size: 28px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     ENCABEZADO
+========================= -->
+
 <header>
-    <h1>ROSELLE</h1>
-    <p>Flores y arreglos artesanales de limpiapipas</p>
+
+<h1>ROSELLE</h1>
+
+<p>
+Flores y arreglos artesanales hechos con creatividad
+</p>
+
 </header>
 
-<section class="intro">
 
-    <h2>Nuestro equipo</h2>
+<!-- =========================
+     SOBRE ROSELLE
+========================= -->
 
-    <p>
-        Conoce a los integrantes de nuestra empresa y
-        consulta sus datos mediante sus códigos de barras.
-    </p>
+<section class="empresa">
+
+<h2>
+Donde cada detalle florece
+</h2>
+
+
+<p>
+
+<strong>ROSELLE</strong> nace de una idea sencilla pero especial:
+convertir pequeños materiales en grandes emociones.
+
+Creamos flores y arreglos artesanales de limpiapipas,
+elaborados con paciencia, creatividad y mucho cariño.
+
+</p>
+
+
+<p>
+
+Cada flor representa una idea, un momento y una forma diferente
+de expresar lo que sentimos.
+
+Por eso, en ROSELLE no solo creamos productos;
+creamos detalles pensados para regalar, sorprender
+y quedarse en la memoria.
+
+</p>
+
+
+<p>
+
+Somos un equipo que cree en la creatividad,
+en el trabajo conjunto y en la magia de transformar
+algo sencillo en algo extraordinario.
+
+</p>
+
+
+<p class="frase">
+
+“Pequeñas flores, grandes emociones.”
+
+</p>
 
 </section>
+
+
+<!-- =========================
+     EQUIPO
+========================= -->
+
+<h2 class="titulo-equipo">
+
+✦ Conoce a quienes hacen florecer ROSELLE ✦
+
+</h2>
+
+
+<p class="subtitulo-equipo">
+
+Cada persona aporta una idea, cada idea aporta un detalle
+y cada detalle hace crecer nuestra historia.
+
+</p>
 
 
 <section class="integrantes">
 
-    <!-- INTEGRANTE 1 -->
 
-    <div class="tarjeta">
+<!-- NICOLE -->
 
-        <div class="foto">N</div>
+<div class="tarjeta">
 
-        <h3>Nicole</h3>
+<div class="foto">N</div>
 
-        <p class="cargo">
-            Gerente General
-        </p>
+<h3>
+Nicole Jhamile Taype Carrasco
+</h3>
 
-        <svg id="codigoNicole" class="codigo"></svg>
+<p class="cargo">
+Gerente General
+</p>
 
-        <p class="id">
-            ID: ROS001
-        </p>
+<p class="descripcion">
 
-        <button onclick="mostrarInfo(
-            'Nicole',
-            'Gerente General',
-            'ROS001',
-            'Encargada de la organización y dirección de Roselle.'
-        )">
-            Ver información
-        </button>
+Detrás de cada gran idea existe alguien que se atreve
+a convertirla en realidad. Nicole guía a ROSELLE con
+dedicación, creatividad y visión, coordinando cada detalle
+para que el trabajo en equipo se convierta en resultados.
 
-    </div>
+Su propósito es mantener viva la esencia de la marca
+y hacer que cada creación tenga un significado especial.
 
+</p>
 
-    <!-- INTEGRANTE 2 -->
+<svg id="codigo1" class="codigo"></svg>
 
-    <div class="tarjeta">
+<p class="id">
+ID: ROS001
+</p>
 
-        <div class="foto">A</div>
+<button onclick="mostrarInfo('ROS001')">
+Ver información
+</button>
 
-        <h3>Andrea</h3>
-
-        <p class="cargo">
-            Diseño
-        </p>
-
-        <svg id="codigoAndrea" class="codigo"></svg>
-
-        <p class="id">
-            ID: ROS002
-        </p>
-
-        <button onclick="mostrarInfo(
-            'Andrea',
-            'Diseño',
-            'ROS002',
-            'Encargada del diseño y presentación de nuestros productos.'
-        )">
-            Ver información
-        </button>
-
-    </div>
+</div>
 
 
-    <!-- INTEGRANTE 3 -->
+<!-- YHAJAIRA -->
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <div class="foto">C</div>
+<div class="foto">Y</div>
 
-        <h3>Camila</h3>
+<h3>
+Yhajaira Nicoll Soto Morales
+</h3>
 
-        <p class="cargo">
-            Producción
-        </p>
+<p class="cargo">
+Gerente de Marketing
+</p>
 
-        <svg id="codigoCamila" class="codigo"></svg>
+<p class="descripcion">
 
-        <p class="id">
-            ID: ROS003
-        </p>
+Las buenas ideas merecen ser vistas, recordadas y compartidas.
+Yhajaira se encarga de darle voz, personalidad y encanto
+a ROSELLE, creando formas originales de conectar con nuestros
+clientes.
 
-        <button onclick="mostrarInfo(
-            'Camila',
-            'Producción',
-            'ROS003',
-            'Encargada de la elaboración de flores y arreglos.'
-        )">
-            Ver información
-        </button>
+Su creatividad ayuda a transmitir aquello que hace que
+cada flor y cada detalle de nuestra marca sea único.
 
-    </div>
+</p>
+
+<svg id="codigo2" class="codigo"></svg>
+
+<p class="id">
+ID: ROS002
+</p>
+
+<button onclick="mostrarInfo('ROS002')">
+Ver información
+</button>
+
+</div>
 
 
-    <!-- INTEGRANTE 4 -->
+<!-- GÉNESIS -->
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <div class="foto">M</div>
+<div class="foto">G</div>
 
-        <h3>María</h3>
+<h3>
+Génesis Ariana Parreño Alvarado
+</h3>
 
-        <p class="cargo">
-            Marketing
-        </p>
+<p class="cargo">
+Gerente de Ventas
+</p>
 
-        <svg id="codigoMaria" class="codigo"></svg>
+<p class="descripcion">
 
-        <p class="id">
-            ID: ROS004
-        </p>
+Cada cliente tiene una historia y cada detalle puede
+convertirse en un recuerdo.
 
-        <button onclick="mostrarInfo(
-            'María',
-            'Marketing',
-            'ROS004',
-            'Encargada de la publicidad y promoción de Roselle.'
-        )">
-            Ver información
-        </button>
+Génesis se encarga de acercar nuestras creaciones
+a las personas, brindando una atención especial y
+buscando que cada compra sea una experiencia bonita.
 
-    </div>
+</p>
+
+<svg id="codigo3" class="codigo"></svg>
+
+<p class="id">
+ID: ROS003
+</p>
+
+<button onclick="mostrarInfo('ROS003')">
+Ver información
+</button>
+
+</div>
+
+
+<!-- DAMARIZ -->
+
+<div class="tarjeta">
+
+<div class="foto">D</div>
+
+<h3>
+Damariz Nilda Rodríguez Papuyco
+</h3>
+
+<p class="cargo">
+Gerente de Producción
+</p>
+
+<p class="descripcion">
+
+Convertir simples materiales en algo bonito requiere
+paciencia, dedicación y mucho cariño.
+
+Damariz supervisa el proceso de creación de nuestros
+productos, cuidando cada etapa y cada pequeño detalle.
+
+Gracias a su trabajo, las ideas de ROSELLE toman forma
+y se transforman en flores hechas para sorprender.
+
+</p>
+
+<svg id="codigo4" class="codigo"></svg>
+
+<p class="id">
+ID: ROS004
+</p>
+
+<button onclick="mostrarInfo('ROS004')">
+Ver información
+</button>
+
+</div>
+
+
+<!-- NATHANIEL -->
+
+<div class="tarjeta">
+
+<div class="foto">N</div>
+
+<h3>
+Nathaniel Xiomara Vásquez Zuta
+</h3>
+
+<p class="cargo">
+Asistente de Producción
+</p>
+
+<p class="descripcion">
+
+Detrás de cada creación existen pequeños detalles
+que hacen una gran diferencia.
+
+Nathaniel acompaña y apoya el proceso de producción,
+preparando materiales y colaborando en la elaboración
+de nuestros arreglos.
+
+Su dedicación forma parte de ese trabajo en equipo
+que hace posible cada creación de ROSELLE.
+
+</p>
+
+<svg id="codigo5" class="codigo"></svg>
+
+<p class="id">
+ID: ROS005
+</p>
+
+<button onclick="mostrarInfo('ROS005')">
+Ver información
+</button>
+
+</div>
+
+
+<!-- BRIANA -->
+
+<div class="tarjeta">
+
+<div class="foto">B</div>
+
+<h3>
+Briana Valentina Silva Chumpitaz
+</h3>
+
+<p class="cargo">
+Gerente de Innovación y Desarrollo
+</p>
+
+<p class="descripcion">
+
+La creatividad no tiene límites cuando siempre existen
+nuevas ideas por descubrir.
+
+Briana se encarga de imaginar, explorar y proponer
+nuevas formas de hacer crecer a ROSELLE.
+
+Su trabajo busca convertir ideas diferentes en creaciones
+originales y mantener ese toque especial de nuestra marca.
+
+</p>
+
+<svg id="codigo6" class="codigo"></svg>
+
+<p class="id">
+ID: ROS006
+</p>
+
+<button onclick="mostrarInfo('ROS006')">
+Ver información
+</button>
+
+</div>
+
+
+<!-- ELIEL -->
+
+<div class="tarjeta">
+
+<div class="foto">E</div>
+
+<h3>
+Eliel Alexis Ledesma Flores
+</h3>
+
+<p class="cargo">
+Gerente de Finanzas
+</p>
+
+<p class="descripcion">
+
+Para que una idea pueda crecer, también necesita una base
+sólida que la acompañe.
+
+Eliel se encarga de cuidar y organizar los recursos
+de ROSELLE, procurando que cada decisión económica
+se tome de manera responsable.
+
+Su trabajo permite que podamos seguir creando,
+creciendo y soñando con nuevos proyectos.
+
+</p>
+
+<svg id="codigo7" class="codigo"></svg>
+
+<p class="id">
+ID: ROS007
+</p>
+
+<button onclick="mostrarInfo('ROS007')">
+Ver información
+</button>
+
+</div>
+
 
 </section>
 
 
+<!-- =========================
+     VENTANA
+========================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-contenido">
+
+<span class="cerrar" onclick="cerrarModal()">×</span>
+
+<h2 id="modalNombre"></h2>
+
+<p>
+<strong>Cargo:</strong>
+<span id="modalCargo"></span>
+</p>
+
+<p id="modalDescripcion"></p>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PIE
+========================= -->
+
 <footer>
 
-    <p>
-        © 2026 ROSELLE
-    </p>
+<p>
+<strong>ROSELLE</strong>
+</p>
 
-    <p>
-        Flores artesanales hechas con creatividad
-    </p>
+<p>
+Pequeñas flores, grandes emociones.
+</p>
+
+<p>
+© 2026 ROSELLE
+</p>
 
 </footer>
 
 
 <script>
 
-    /* CÓDIGOS DE BARRAS */
 
-    JsBarcode("#codigoNicole", "ROS001", {
-        format: "CODE128",
-        width: 2,
-        height: 60,
-        displayValue: true
-    });
+/* =========================
+   DIRECCIÓN DE LA PÁGINA
+========================= */
 
-    JsBarcode("#codigoAndrea", "ROS002", {
-        format: "CODE128",
-        width: 2,
-        height: 60,
-        displayValue: true
-    });
-
-    JsBarcode("#codigoCamila", "ROS003", {
-        format: "CODE128",
-        width: 2,
-        height: 60,
-        displayValue: true
-    });
-
-    JsBarcode("#codigoMaria", "ROS004", {
-        format: "CODE128",
-        width: 2,
-        height: 60,
-        displayValue: true
-    });
+const pagina =
+"https://jhmx11.github.io/Roselle/";
 
 
-    /* INFORMACIÓN */
+/* =========================
+   CÓDIGOS DE BARRAS
+========================= */
 
-    function mostrarInfo(nombre, cargo, id, descripcion) {
+JsBarcode("#codigo1", pagina + "?id=ROS001", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
 
-        alert(
-            "Nombre: " + nombre +
-            "\nCargo: " + cargo +
-            "\nID: " + id +
-            "\n\n" + descripcion
-        );
 
-    }
+JsBarcode("#codigo2", pagina + "?id=ROS002", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+JsBarcode("#codigo3", pagina + "?id=ROS003", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+JsBarcode("#codigo4", pagina + "?id=ROS004", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+JsBarcode("#codigo5", pagina + "?id=ROS005", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+JsBarcode("#codigo6", pagina + "?id=ROS006", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+JsBarcode("#codigo7", pagina + "?id=ROS007", {
+    format: "CODE128",
+    width: 1.4,
+    height: 60,
+    displayValue: false
+});
+
+
+/* =========================
+   DATOS
+========================= */
+
+const integrantes = {
+
+ROS001: {
+
+nombre: "Nicole Jhamile Taype Carrasco",
+
+cargo: "Gerente General",
+
+descripcion:
+"Nicole guía a ROSELLE con dedicación, creatividad y visión, coordinando cada detalle para que el trabajo en equipo se convierta en resultados. Su propósito es mantener viva la esencia de la marca y hacer que cada creación tenga un significado especial."
+
+},
+
+ROS002: {
+
+nombre: "Yhajaira Nicoll Soto Morales",
+
+cargo: "Gerente de Marketing",
+
+descripcion:
+"Yhajaira se encarga de darle voz, personalidad y encanto a ROSELLE, creando formas originales de conectar con nuestros clientes. Su creatividad ayuda a transmitir aquello que hace que cada flor y cada detalle de nuestra marca sea único."
+
+},
+
+ROS003: {
+
+nombre: "Génesis Ariana Parreño Alvarado",
+
+cargo: "Gerente de Ventas",
+
+descripcion:
+"Génesis se encarga de acercar nuestras creaciones a las personas, brindando una atención especial y buscando que cada compra sea una experiencia bonita. Su compromiso ayuda a que las flores de ROSELLE lleguen cada vez más lejos."
+
+},
+
+ROS004: {
+
+nombre: "Damariz Nilda Rodríguez Papuyco",
+
+cargo: "Gerente de Producción",
+
+descripcion:
+"Damariz supervisa el proceso de creación de nuestros productos, cuidando cada etapa y cada pequeño detalle. Gracias a su trabajo, las ideas de ROSELLE toman forma y se transforman en flores hechas para sorprender."
+
+},
+
+ROS005: {
+
+nombre: "Nathaniel Xiomara Vásquez Zuta",
+
+cargo: "Asistente de Producción",
+
+descripcion:
+"Nathaniel acompaña y apoya el proceso de producción, preparando materiales y colaborando en la elaboración de nuestros arreglos. Su dedicación forma parte de ese trabajo en equipo que hace posible cada creación de ROSELLE."
+
+},
+
+ROS006: {
+
+nombre: "Briana Valentina Silva Chumpitaz",
+
+cargo: "Gerente de Innovación y Desarrollo",
+
+descripcion:
+"Briana se encarga de imaginar, explorar y proponer nuevas formas de hacer crecer a ROSELLE. Su trabajo busca convertir ideas diferentes en creaciones originales y mantener ese toque especial que hace única a nuestra marca."
+
+},
+
+ROS007: {
+
+nombre: "Eliel Alexis Ledesma Flores",
+
+cargo: "Gerente de Finanzas",
+
+descripcion:
+"Eliel se encarga de cuidar y organizar los recursos de ROSELLE, procurando que cada decisión económica se tome de manera responsable. Su trabajo permite que podamos seguir creando, creciendo y soñando con nuevos proyectos."
+
+}
+
+};
+
+
+/* =========================
+   MOSTRAR INFORMACIÓN
+========================= */
+
+function mostrarInfo(id) {
+
+const persona = integrantes[id];
+
+document.getElementById("modalNombre").textContent =
+persona.nombre;
+
+document.getElementById("modalCargo").textContent =
+persona.cargo;
+
+document.getElementById("modalDescripcion").textContent =
+persona.descripcion;
+
+document.getElementById("modal").style.display = "flex";
+
+}
+
+
+/* =========================
+   CERRAR
+========================= */
+
+function cerrarModal() {
+
+document.getElementById("modal").style.display = "none";
+
+}
+
+
+/* =========================
+   ABRIR SEGÚN CÓDIGO
+========================= */
+
+const parametros =
+new URLSearchParams(window.location.search);
+
+const id =
+parametros.get("id");
+
+
+if (id && integrantes[id]) {
+
+mostrarInfo(id);
+
+}
 
 </script>
 
+
 </body>
+
 </html>
