@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roselle | Nuestra Empresa</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff5fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8e4568, #c77da4);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            letter-spacing: 4px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 35px 20px 10px;
+        }
+
+        .intro h2 {
+            color: #8e4568;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .integrantes {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-7px);
+        }
+
+        .foto {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            background: #f3d5e4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #8e4568;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h3 {
+            color: #8e4568;
+            font-size: 23px;
+        }
+
+        .cargo {
+            color: #777;
+            margin: 8px 0 15px;
+        }
+
+        .codigo {
+            width: 100%;
+            max-width: 240px;
+            height: 80px;
+            margin: 10px auto;
+        }
+
+        .id {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: #8e4568;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6f3150;
+        }
+
+        footer {
+            background: #8e4568;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ROSELLE</h1>
+    <p>Flores y arreglos artesanales de limpiapipas</p>
+</header>
+
+<section class="intro">
+
+    <h2>Nuestro equipo</h2>
+
+    <p>
+        Conoce a los integrantes de nuestra empresa y
+        consulta sus datos mediante sus códigos de barras.
+    </p>
+
+</section>
+
+
+<section class="integrantes">
+
+    <!-- INTEGRANTE 1 -->
+
+    <div class="tarjeta">
+
+        <div class="foto">N</div>
+
+        <h3>Nicole</h3>
+
+        <p class="cargo">
+            Gerente General
+        </p>
+
+        <svg id="codigoNicole" class="codigo"></svg>
+
+        <p class="id">
+            ID: ROS001
+        </p>
+
+        <button onclick="mostrarInfo(
+            'Nicole',
+            'Gerente General',
+            'ROS001',
+            'Encargada de la organización y dirección de Roselle.'
+        )">
+            Ver información
+        </button>
+
+    </div>
+
+
+    <!-- INTEGRANTE 2 -->
+
+    <div class="tarjeta">
+
+        <div class="foto">A</div>
+
+        <h3>Andrea</h3>
+
+        <p class="cargo">
+            Diseño
+        </p>
+
+        <svg id="codigoAndrea" class="codigo"></svg>
+
+        <p class="id">
+            ID: ROS002
+        </p>
+
+        <button onclick="mostrarInfo(
+            'Andrea',
+            'Diseño',
+            'ROS002',
+            'Encargada del diseño y presentación de nuestros productos.'
+        )">
+            Ver información
+        </button>
+
+    </div>
+
+
+    <!-- INTEGRANTE 3 -->
+
+    <div class="tarjeta">
+
+        <div class="foto">C</div>
+
+        <h3>Camila</h3>
+
+        <p class="cargo">
+            Producción
+        </p>
+
+        <svg id="codigoCamila" class="codigo"></svg>
+
+        <p class="id">
+            ID: ROS003
+        </p>
+
+        <button onclick="mostrarInfo(
+            'Camila',
+            'Producción',
+            'ROS003',
+            'Encargada de la elaboración de flores y arreglos.'
+        )">
+            Ver información
+        </button>
+
+    </div>
+
+
+    <!-- INTEGRANTE 4 -->
+
+    <div class="tarjeta">
+
+        <div class="foto">M</div>
+
+        <h3>María</h3>
+
+        <p class="cargo">
+            Marketing
+        </p>
+
+        <svg id="codigoMaria" class="codigo"></svg>
+
+        <p class="id">
+            ID: ROS004
+        </p>
+
+        <button onclick="mostrarInfo(
+            'María',
+            'Marketing',
+            'ROS004',
+            'Encargada de la publicidad y promoción de Roselle.'
+        )">
+            Ver información
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 ROSELLE
+    </p>
+
+    <p>
+        Flores artesanales hechas con creatividad
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* CÓDIGOS DE BARRAS */
+
+    JsBarcode("#codigoNicole", "ROS001", {
+        format: "CODE128",
+        width: 2,
+        height: 60,
+        displayValue: true
+    });
+
+    JsBarcode("#codigoAndrea", "ROS002", {
+        format: "CODE128",
+        width: 2,
+        height: 60,
+        displayValue: true
+    });
+
+    JsBarcode("#codigoCamila", "ROS003", {
+        format: "CODE128",
+        width: 2,
+        height: 60,
+        displayValue: true
+    });
+
+    JsBarcode("#codigoMaria", "ROS004", {
+        format: "CODE128",
+        width: 2,
+        height: 60,
+        displayValue: true
+    });
+
+
+    /* INFORMACIÓN */
+
+    function mostrarInfo(nombre, cargo, id, descripcion) {
+
+        alert(
+            "Nombre: " + nombre +
+            "\nCargo: " + cargo +
+            "\nID: " + id +
+            "\n\n" + descripcion
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
